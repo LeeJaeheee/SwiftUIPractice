@@ -17,24 +17,10 @@ struct RecommendView: View {
                     .font(.system(size: 27, weight: .bold))
                     .lineSpacing(5)
                     .padding(.vertical, 30)
-
-                HStack(spacing: 15) {
-                    Image(systemName: "checkmark.square.fill")
-                        .foregroundStyle(.blue)
-                    Text("매일 포인트 받는 출석체크-퀴즈")
-                }
- 
-                HStack(spacing: 15) {
-                    Image(systemName: "n.circle.fill")
-                        .foregroundStyle(.red)
-                    Text("새로운 이벤트")
-                }
-
-                HStack(spacing: 15) {
-                    Image(systemName: "star.fill")
-                        .foregroundStyle(.yellow)
-                    Text("미션 추천")
-                }
+                
+                RecommendItemView(icon: "checkmark.square.fill", iconColor: .blue, text: "매일 포인트 받는 출석체크-퀴즈")
+                RecommendItemView(icon: "n.circle.fill", iconColor: .red, text: "새로운 이벤트")
+                RecommendItemView(icon: "star.fill", iconColor: .yellow, text: "미션 추천")
                 
                 Spacer()
                 
@@ -43,17 +29,41 @@ struct RecommendView: View {
                     .font(.system(size: 17))
             })
             .font(.title3)
-
+            
             Button("동의하기") { }
-                .padding()
-                .background(.blue)
-                .foregroundStyle(.white)
-                .cornerRadius(12)
+                .buttonStyle(MyButtonStyle(backgroundColor: .blue))
+            
             Button("다음에 하기") { }
-                .padding()
-                .foregroundStyle(.gray)
+                .buttonStyle(MyButtonStyle(foregroundColor: .gray))
             
         }
+    }
+}
+
+struct RecommendItemView: View {
+    let icon: String
+    let iconColor: Color
+    let text: String
+    
+    var body: some View {
+        HStack(spacing: 15) {
+            Image(systemName: icon)
+                .foregroundStyle(iconColor)
+            Text(text)
+        }
+    }
+}
+
+struct MyButtonStyle: ButtonStyle {
+    var backgroundColor: Color = .clear
+    var foregroundColor: Color = .white
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(backgroundColor)
+            .foregroundStyle(foregroundColor)
+            .clipShape(.rect(cornerRadius: 12))
     }
 }
 

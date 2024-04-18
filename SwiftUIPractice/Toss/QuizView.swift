@@ -19,50 +19,41 @@ struct QuizView: View {
                 }
                 .padding(.vertical, 20)
                 HStack {
-                    VStack(spacing: 20) {
-                        Image(systemName: "circle")
-                        Text("그렇다")
-                    }
-                    .padding()
-                    .background(.blue)
-                    VStack(spacing: 20) {
-                        Image(systemName: "xmark")
-                        Text("아니다")
-                    }
-                    .padding()
-                    .background(.red)
+                    OptionView(systemName: "circle", text: "그렇다", backgroundColor: .blue)
+                    OptionView(systemName: "xmark", text: "아니다", backgroundColor: .red)
                 }
-                .font(.title2)
                 .padding(.bottom, 20)
             }
             .background(Color.indigo)
-            .padding(.horizontal, 20)
-            Spacer()
+            .padding([.horizontal, .top], 20)
+            
+            //Spacer()
             HStack {
-                VStack(spacing: 20) {
-                    Image(systemName: "circle")
-                    Text("토스뱅크")
-                }
-                .padding()
-                .background(Color.indigo)
+                OptionView(systemName: "circle", text: "토스뱅크")
                 Spacer()
-                VStack(spacing: 20) {
-                    Image(systemName: "circle")
-                    Text("토스증권")
-                }
-                .padding()
-                .background(Color.indigo)
+                OptionView(systemName: "circle", text: "토스증권")
                 Spacer()
-                VStack(spacing: 20) {
-                    Image(systemName: "circle")
-                    Text("고객센터")
-                }
-                .padding()
-                .background(Color.indigo)
+                OptionView(systemName: "circle", text: "고객센터")
             }
-            .font(.title2)
             .padding(20)
         }
+        .background(.yellow)
+    }
+}
+
+struct OptionView: View {
+    var systemName: String
+    var text: String
+    var backgroundColor: Color = .indigo
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Image(systemName: systemName)
+            Text(text)
+        }
+        .padding()
+        .background(backgroundColor)
+        .font(.title2)
     }
 }
 
