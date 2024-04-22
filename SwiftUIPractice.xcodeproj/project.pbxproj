@@ -13,6 +13,10 @@
 		D29A71812BCD599500F36BB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29A71802BCD599500F36BB5 /* Preview Assets.xcassets */; };
 		D29A71892BCD59D700F36BB5 /* RecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A71882BCD59D700F36BB5 /* RecommendView.swift */; };
 		D29A718B2BCD690600F36BB5 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A718A2BCD690600F36BB5 /* QuizView.swift */; };
+		D2EDA3372BD55977009CB0D7 /* RandomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA3362BD55977009CB0D7 /* RandomImageView.swift */; };
+		D2EDA3392BD55B0F009CB0D7 /* RandomImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA3382BD55B0F009CB0D7 /* RandomImage.swift */; };
+		D2EDA33B2BD560EF009CB0D7 /* DetailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA33A2BD560EF009CB0D7 /* DetailImageView.swift */; };
+		D2EDA33F2BD575E7009CB0D7 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA33E2BD575E7009CB0D7 /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		D29A71802BCD599500F36BB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D29A71882BCD59D700F36BB5 /* RecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendView.swift; sourceTree = "<group>"; };
 		D29A718A2BCD690600F36BB5 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		D2EDA3362BD55977009CB0D7 /* RandomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageView.swift; sourceTree = "<group>"; };
+		D2EDA3382BD55B0F009CB0D7 /* RandomImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImage.swift; sourceTree = "<group>"; };
+		D2EDA33A2BD560EF009CB0D7 /* DetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageView.swift; sourceTree = "<group>"; };
+		D2EDA33E2BD575E7009CB0D7 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,8 @@
 		D29A71782BCD599300F36BB5 /* SwiftUIPractice */ = {
 			isa = PBXGroup;
 			children = (
+				D2EDA33C2BD5754E009CB0D7 /* Category */,
+				D2EDA3352BD55965009CB0D7 /* RandomImage */,
 				D29A71872BCD59A900F36BB5 /* Toss */,
 				D29A71792BCD599300F36BB5 /* SwiftUIPracticeApp.swift */,
 				D29A717B2BCD599300F36BB5 /* ContentView.swift */,
@@ -79,6 +89,24 @@
 				D29A718A2BCD690600F36BB5 /* QuizView.swift */,
 			);
 			path = Toss;
+			sourceTree = "<group>";
+		};
+		D2EDA3352BD55965009CB0D7 /* RandomImage */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDA3382BD55B0F009CB0D7 /* RandomImage.swift */,
+				D2EDA3362BD55977009CB0D7 /* RandomImageView.swift */,
+				D2EDA33A2BD560EF009CB0D7 /* DetailImageView.swift */,
+			);
+			path = RandomImage;
+			sourceTree = "<group>";
+		};
+		D2EDA33C2BD5754E009CB0D7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D2EDA33E2BD575E7009CB0D7 /* CategoryView.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29A717C2BCD599300F36BB5 /* ContentView.swift in Sources */,
+				D2EDA33B2BD560EF009CB0D7 /* DetailImageView.swift in Sources */,
 				D29A718B2BCD690600F36BB5 /* QuizView.swift in Sources */,
 				D29A71892BCD59D700F36BB5 /* RecommendView.swift in Sources */,
+				D2EDA3372BD55977009CB0D7 /* RandomImageView.swift in Sources */,
+				D2EDA3392BD55B0F009CB0D7 /* RandomImage.swift in Sources */,
+				D2EDA33F2BD575E7009CB0D7 /* CategoryView.swift in Sources */,
 				D29A717A2BCD599300F36BB5 /* SwiftUIPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +328,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,7 +357,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
